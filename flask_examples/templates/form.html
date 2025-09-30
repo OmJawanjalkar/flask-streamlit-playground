@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask Form Practice</h1>
+
+    <!-- Form using GET method -->
+    <h2>GET Form</h2>
+    <form action="/form" method="GET">
+        <label for="get_name">Enter your name (GET):</label>
+        <input type="text" name="get_name" id="get_name" required>
+        <button type="submit">Submit GET</button>
+    </form>
+
+    {% if get_name %}
+        <p>Hello, {{ get_name }}! 👋 (from GET)</p>
+    {% endif %}
+
+    <hr>
+
+    <!-- Form using POST method -->
+    <h2>POST Form</h2>
+    <form action="/form" method="POST">
+        <label for="post_name">Enter your name (POST):</label>
+        <input type="text" name="post_name" id="post_name" required>
+        <button type="submit">Submit POST</button>
+    </form>
+
+    {% if post_name %}
+        <p>Hello, {{ post_name }}! 👋 (from POST)</p>
+    {% endif %}
+
+</body>
+</html>

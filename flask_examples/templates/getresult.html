@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Scores</title>
+  </head>
+  <body>
+    <h2>Enter Your Scores</h2>
+
+    <form action="/submit" method="POST">
+      <label for="science">Science:</label><br>
+      <input type="number" id="science" name="science" value="0" min="0" max="100"><br>
+
+      <label for="maths">Maths:</label><br>
+      <input type="number" id="maths" name="maths" value="0" min="0" max="100"><br>
+
+      <label for="c">C:</label><br>
+      <input type="number" id="c" name="c" value="0" min="0" max="100"><br>
+
+      <label for="datascience">Data Science:</label><br>
+      <input type="number" id="datascience" name="datascience" value="0" min="0" max="100"><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <p>Click "Submit" to calculate your total score.</p>
+  </body>
+</html>
